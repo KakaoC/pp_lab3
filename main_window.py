@@ -166,7 +166,10 @@ class Window(QMainWindow):
             self.info_text_label.adjustSize()
 
     def to_csv(self) -> None:
-        to_csv.to_annotation(self.folderpath_dataset)
+        to_csv.to_annotation(self.folderpath_dataset + "/download_data")
+        self.info_text_label.setText("Finish create annotation for dataset!")
+        self.info_text_label.move(0, 695)
+        self.info_text_label.adjustSize()
 
     def create_another(self) -> None:
         another_copy.start_copy()
