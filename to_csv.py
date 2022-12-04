@@ -16,7 +16,7 @@ def write(name_class: str, number: str) -> None:
         )
 
 
-def to_csv(folderpath: str) -> None:
+def to_annotation(folderpath: str) -> None:
     '''
     создание csv-файла
     поочерёдная запись класса zebra в файл-аннотацию из папки download_data
@@ -40,4 +40,4 @@ if __name__ == "__main__":
         pass
     else:
         print(os.getcwd() + path + " - no have")
-    to_csv(path)
+    to_annotation(path)
